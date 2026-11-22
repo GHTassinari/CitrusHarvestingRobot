@@ -12,6 +12,8 @@
 
 <img src="images/robot-iso.png" alt="Full 3D model of the robot" width="560">
 
+**[Project page](https://ghtassinari.github.io/CitrusHarvestingRobot/) · [Printed parts](#printed-parts) · [Bill of materials](docs/bill-of-materials.md) · [Design log](docs/design-log.md)**
+
 </div>
 
 ---
@@ -385,7 +387,7 @@ This work is the undergraduate thesis (TCC) of **Guilherme Henrique Tassinari**,
 
 The research follows the **Design Science Research** method. The robot is the artefact, and each design–print–test cycle documented in the design log is one iteration of the development and evaluation stages.
 
-If you use this design, please cite:
+GitHub shows a **Cite this repository** button generated from [`CITATION.cff`](CITATION.cff). If you use this design, please cite:
 
 ```bibtex
 @misc{tassinari2026citrus,

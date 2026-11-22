@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this design, please cite it as below."
+type: software
+title: "Citrus Harvesting Robot: an open, low-cost 3D-printed tracked robot platform for selective orange harvesting"
+abstract: >-
+  Open-hardware design of a low-cost tracked mobile robot for selective,
+  single-fruit orange harvesting, organised as a layered IoT architecture
+  (perception, network, processing and application). Includes the FreeCAD
+  source model, printable STL files, assembly guides, bill of materials and
+  a design log of the prototype iterations.
+authors:
+  - family-names: Tassinari
+    given-names: Guilherme Henrique
+    affiliation: "Federal Institute of Education, Science and Technology of Southern Minas Gerais (IFSULDEMINAS), Campus Machado"
+repository-code: "https://github.com/GHTassinari/CitrusHarvestingRobot"
+url: "https://ghtassinari.github.io/CitrusHarvestingRobot/"
+license: CC-BY-SA-4.0
+version: 1.0.0
+date-released: 2026-11-22
+keywords:
+  - agricultural robotics
+  - orange harvesting
+  - citrus
+  - internet of things
+  - edge computing
+  - 3D printing
+  - open hardware
+  - FreeCAD
+  - Raspberry Pi
+  - Arduino
+  - Kinect v2
+preferred-citation:
+  type: thesis
+  thesis-type: "Undergraduate thesis (Bachelor's degree in Information Systems)"
+  title: "Arquitetura IoT na colheita autônoma de laranjas: automação e tomada de decisão baseada em dados"
+  authors:
+    - family-names: Tassinari
+      given-names: Guilherme Henrique
+  institution:
+    name: "Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais (IFSULDEMINAS), Campus Machado"
+    city: Machado
+    country: BR
+  year: 2026
+  languages:
+    - pt

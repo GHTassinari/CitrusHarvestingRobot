@@ -1,0 +1,14 @@
+{
+  "title": "Citrus Harvesting Robot: an open, low-cost 3D-printed tracked robot platform for selective orange harvesting",
+  "description": "Open-hardware design of a low-cost tracked mobile robot for selective, single-fruit orange harvesting, organised as a layered IoT architecture. Includes the FreeCAD source model, printable STL files, assembly guides, bill of materials and a design log. Developed for an undergraduate thesis in Information Systems at IFSULDEMINAS, Campus Machado, Brazil (2026).",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Tassinari, Guilherme Henrique",
+      "affiliation": "IFSULDEMINAS - Campus Machado"
+    }
+  ],
+  "license": "cc-by-sa-4.0",
+  "keywords": ["agricultural robotics", "orange harvesting", "citrus", "internet of things", "edge computing", "3D printing", "open hardware", "FreeCAD"],
+  "language": "eng"
+}

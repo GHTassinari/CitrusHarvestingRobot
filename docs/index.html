@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citrus Harvesting Robot – open, low-cost 3D-printed robot for selective orange harvesting</title>
+<meta name="description" content="Open-hardware, low-cost tracked robot for selective, single-fruit orange harvesting, built on a layered IoT architecture with a Raspberry Pi 4, Arduino Mega and Kinect v2. FreeCAD model, STL files, assembly guides and bill of materials.">
+<meta name="keywords" content="orange harvesting robot, citrus harvesting, agricultural robotics, IoT, edge computing, 3D printing, open hardware, FreeCAD, Raspberry Pi, Arduino, Kinect v2, lead screw elevator, robot gripper">
+<meta name="author" content="Guilherme Henrique Tassinari">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ghtassinari.github.io/CitrusHarvestingRobot/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Citrus Harvesting Robot">
+<meta property="og:description" content="Open, low-cost 3D-printed tracked robot for selective orange harvesting on a layered IoT architecture.">
+<meta property="og:url" content="https://ghtassinari.github.io/CitrusHarvestingRobot/">
+<meta property="og:image" content="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Citrus Harvesting Robot">
+<meta name="twitter:description" content="Open, low-cost 3D-printed tracked robot for selective orange harvesting on a layered IoT architecture.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/social-preview.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Citrus Harvesting Robot",
+  "alternateName": "Arquitetura IoT na colheita autônoma de laranjas",
+  "description": "Open-hardware design of a low-cost tracked mobile robot for selective, single-fruit orange harvesting, organised as a layered IoT architecture (perception, network, processing and application).",
+  "url": "https://ghtassinari.github.io/CitrusHarvestingRobot/",
+  "sameAs": "https://github.com/GHTassinari/CitrusHarvestingRobot",
+  "image": "https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/robot-iso.png",
+  "author": {
+    "@type": "Person",
+    "name": "Guilherme Henrique Tassinari",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais (IFSULDEMINAS) – Campus Machado"
+    }
+  },
+  "dateCreated": "2026",
+  "datePublished": "2026-11-22",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "inLanguage": "en",
+  "keywords": ["agricultural robotics", "orange harvesting", "citrus", "internet of things", "edge computing", "3D printing", "open hardware", "FreeCAD", "Raspberry Pi", "Arduino", "Kinect v2"],
+  "isPartOf": {
+    "@type": "Thesis",
+    "name": "Arquitetura IoT na colheita autônoma de laranjas: automação e tomada de decisão baseada em dados",
+    "inLanguage": "pt-BR",
+    "author": {"@type": "Person", "name": "Guilherme Henrique Tassinari"},
+    "sourceOrganization": {"@type": "CollegeOrUniversity", "name": "IFSULDEMINAS – Campus Machado"},
+    "datePublished": "2026"
+  }
+}
+</script>
+
+<style>
+  :root { --accent: #f28c28; --text: #1e1e1e; --muted: #5f5f5f; --line: #e6e6e6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); line-height: 1.6; background: #fff; }
+  header { border-left: 10px solid var(--accent); padding: 48px 6vw 32px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
+  header .intro { flex: 1 1 380px; }
+  header img { flex: 0 1 420px; max-width: 100%; }
+  h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 12px; }
+  h1 span { color: var(--accent); }
+  h2 { margin-top: 2.4rem; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+  main { padding: 0 6vw 48px; max-width: 1100px; }
+  .lead { font-size: 1.2rem; color: var(--muted); }
+  .buttons a { display: inline-block; margin: 12px 10px 0 0; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+  .primary { background: var(--accent); color: #fff; }
+  .secondary { border: 1px solid var(--line); color: var(--text); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 8px 10px; vertical-align: top; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .grid figure { margin: 0; text-align: center; }
+  .grid img { max-width: 100%; height: 200px; object-fit: contain; }
+  figcaption { color: var(--muted); font-size: 0.9rem; }
+  footer { border-top: 1px solid var(--line); padding: 20px 6vw; color: var(--muted); font-size: 0.9rem; }
+  a { color: #b85e0c; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="intro">
+    <h1>Citrus Harvesting <span>Robot</span></h1>
+    <p class="lead">An open, low-cost, 3D-printed tracked robot for selective, single-fruit orange harvesting, built on a layered Internet of Things architecture.</p>
+    <div class="buttons">
+      <a class="primary" href="https://github.com/GHTassinari/CitrusHarvestingRobot">View on GitHub</a>
+      <a class="secondary" href="https://github.com/GHTassinari/CitrusHarvestingRobot#printed-parts">Printed parts</a>
+      <a class="secondary" href="https://github.com/GHTassinari/CitrusHarvestingRobot/tree/main/stl">Download STL files</a>
+    </div>
+  </div>
+  <img src="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/robot-iso.png" alt="3D model of the citrus harvesting robot: tracked chassis, lead-screw elevator, Kinect v2, cage gripper and hopper">
+</header>
+
+<main>
+  <h2>About the project</h2>
+  <p>Table oranges are still picked by hand, while mechanical shakers damage the tree and the fruit. This project proposes a small mobile robot that harvests one fruit at a time. The hardware is organised in four IoT layers: perception (Kinect v2 depth camera, motors and servos), network (USB and Wi-Fi), processing (Raspberry Pi 4 at the edge and Arduino Mega 2560 for real-time control) and application (remote supervision, future work).</p>
+  <p>The robot was developed with the Design Science Research method for an undergraduate thesis in Information Systems at IFSULDEMINAS – Campus Machado, Brazil (2026). All mechanical files are released as open hardware under CC BY-SA 4.0.</p>
+
+  <h2>Subsystems</h2>
+  <div class="grid">
+    <figure><img src="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/elevator.png" alt="Lead-screw elevator of the robot"><figcaption>Lead-screw elevator: ~131 mm stroke, ~320 mm/min</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/kinect-mount.png" alt="Kinect v2 tilt mount"><figcaption>Kinect v2 tilt mount: −15° to +20°</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/gripper.png" alt="Cage gripper for oranges"><figcaption>Cage gripper: Ø72 mm ring, single servo</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/hopper-side.png" alt="Hopper with solenoid-locked door"><figcaption>Hopper with a solenoid-locked gravity door</figcaption></figure>
+  </div>
+
+  <h2>Key specifications</h2>
+  <table>
+    <tr><th>Item</th><th>Specification</th></tr>
+    <tr><td>Chassis</td><td>Two 248 × 200 mm PETG plates, TPU tracks, skid steering, 2 × JGY370 12 V 130 RPM worm-gear motors</td></tr>
+    <tr><td>Elevator</td><td>Printed Ø16 mm lead screw (8 mm lead) on a steel M8 core, JGY370 40 RPM motor</td></tr>
+    <tr><td>Sensing</td><td>Microsoft Kinect v2 (RGB + time-of-flight depth)</td></tr>
+    <tr><td>Computing</td><td>Raspberry Pi 4 (8 GB, Ubuntu Server 24.04) + Arduino Mega 2560 over USB</td></tr>
+    <tr><td>Power</td><td>LiPo 3S 5000 mAh, isolated 5.0 V logic and 5–6 V servo rails, 3 × BTS7960 H-bridges</td></tr>
+    <tr><td>Fabrication</td><td>FreeCAD, Bambu Lab A1, PETG and TPU, M3/M5 screws and nuts only</td></tr>
+  </table>
+
+  <h2>Architecture</h2>
+  <img src="https://raw.githubusercontent.com/GHTassinari/CitrusHarvestingRobot/main/images/architecture-block-diagram.png" alt="Block diagram of the IoT architecture of the robot" style="max-width:100%">
+
+  <h2>Documentation</h2>
+  <ul>
+    <li><a href="https://github.com/GHTassinari/CitrusHarvestingRobot#readme">README: all printed parts, printing guidelines and test results</a></li>
+    <li><a href="https://github.com/GHTassinari/CitrusHarvestingRobot/blob/main/docs/bill-of-materials.md">Bill of materials</a></li>
+    <li><a href="https://github.com/GHTassinari/CitrusHarvestingRobot/blob/main/docs/assembly-elevator.md">Elevator assembly guide</a></li>
+    <li><a href="https://github.com/GHTassinari/CitrusHarvestingRobot/blob/main/docs/assembly-kinect-mount.md">Kinect v2 mount assembly guide</a></li>
+    <li><a href="https://github.com/GHTassinari/CitrusHarvestingRobot/blob/main/docs/design-log.md">Design log: problems found and how they were solved</a></li>
+  </ul>
+
+  <h2>How to cite</h2>
+  <p>Tassinari, G. H. (2026). <em>Citrus Harvesting Robot: an open, low-cost 3D-printed tracked robot platform for selective orange harvesting</em>. GitHub. https://github.com/GHTassinari/CitrusHarvestingRobot</p>
+  <p>Related thesis (in Portuguese): Tassinari, G. H. (2026). <em>Arquitetura IoT na colheita autônoma de laranjas: automação e tomada de decisão baseada em dados</em>. Undergraduate thesis, IFSULDEMINAS – Campus Machado.</p>
+</main>
+
+<footer>
+  © 2026 Guilherme Henrique Tassinari · Design files licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="https://github.com/GHTassinari/CitrusHarvestingRobot">Source on GitHub</a>
+</footer>
+
+</body>
+</html>
