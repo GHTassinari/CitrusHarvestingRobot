@@ -9,6 +9,7 @@
 ![Printer](https://img.shields.io/badge/printed%20on-Bambu%20Lab%20A1-lightgrey)
 ![Material](https://img.shields.io/badge/material-PETG%20%7C%20TPU-green)
 ![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-lightgrey)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24451133.svg)](https://doi.org/10.5281/zenodo.24451133)
 
 <img src="images/robot-iso.png" alt="Full 3D model of the robot" width="560">
 
@@ -394,7 +395,9 @@ GitHub shows a **Cite this repository** button generated from [`CITATION.cff`](C
   author       = {Tassinari, Guilherme Henrique},
   title        = {Citrus Harvesting Robot: an open, low-cost 3D-printed platform for selective orange harvesting},
   year         = {2026},
-  howpublished = {\url{https://github.com/GHTassinari/CitrusHarvestingRobot}},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.24451133},
+  url          = {https://doi.org/10.5281/zenodo.24451133},
   note         = {Undergraduate thesis project, IFSULDEMINAS -- Campus Machado}
 }
 ```

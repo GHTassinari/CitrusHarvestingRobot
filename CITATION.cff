@@ -12,6 +12,11 @@ authors:
   - family-names: Tassinari
     given-names: Guilherme Henrique
     affiliation: "Federal Institute of Education, Science and Technology of Southern Minas Gerais (IFSULDEMINAS), Campus Machado"
+doi: 10.5281/zenodo.24451133
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24451133
+    description: "Concept DOI (all versions), archived on Zenodo"
 repository-code: "https://github.com/GHTassinari/CitrusHarvestingRobot"
 url: "https://ghtassinari.github.io/CitrusHarvestingRobot/"
 license: CC-BY-SA-4.0
