@@ -15,7 +15,7 @@ Printed parts are listed in the [README](../README.md#printed-parts). This page 
 | JGY370 12 V **40 RPM** worm-gear motor, M6 threaded output shaft | 1 | Elevator. |
 | BTS7960 / IBT-2 43 A H-bridge module | 3 | 2 tracks + 1 elevator (2 PWM pins each). |
 | DS3218MG 20 kg·cm digital servo | 2 | Gripper and Kinect tilt. **Measure your servo**: the tab-to-shaft-tip distance of ours was ~8 mm shorter than the catalogue value. |
-| 12 V fail-secure solenoid lock (measured: body 81 × 21 × 15 mm, latch 25 × 10 × 10 mm) | 1 | Hopper door. |
+| 12 V fail-secure solenoid lock (measured: body 54 × 21 × 15 mm, 10 × 10 mm latch, 25 mm out / 15 mm retracted) | 1 | Hopper door. |
 | 1-channel 5 V relay module | 1 | Drives the solenoid from an Arduino pin. |
 | LiPo 3S 11.1 V 5000 mAh, XT90 (147 × 51 × 27 mm) | 1 | ~1 to 1.5 h of operation (estimate). |
 | iMAX B3 Pro 2S/3S balance charger | 1 | Fits the charger enclosure (18/19). |

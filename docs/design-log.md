@@ -58,8 +58,8 @@ Designed and checked in CAD: the door swings 0–90° without collision and the 
 
 | Version | Problem | Fix |
 |---|---|---|
-| 1 | The solenoid pocket (55 × 26 × 20.5 mm) was sized from the TAU-S0837DL catalogue. The real lock did not fit: its body is 81 × 21 × 15 mm and the brass latch is 25 mm long, not 10 mm. The pocket also needed tree supports. | — |
-| 2 | — | Closed 24 × 18 × 83 mm tunnel (1.5 mm clearance per side, 2 mm in length) loaded from the back; 16 × 16 mm latch window; back cap 37d with a Ø12 mm wire hole and 2 × M3 screws; door fin moved and thickened to 6 mm with a 14 mm U-notch (6 mm latch engagement, ≥ 7 mm latch stroke needed). A 57° web under the ramp and a 50° fillet remove every support: the three printed parts only have bridges ≤ 25 mm and 45° chamfers. |
+| 1 | The solenoid pocket (55 × 26 × 20.5 mm) was sized from the TAU-S0837DL catalogue. On the printed part the body width and height fit, but the length did not: the 54 mm body plus the latch, which still sticks out 15 mm when retracted, did not fit, and the 10 × 8 mm pin hole was smaller than the 10 × 10 mm latch. The pocket also needed tree supports. | — |
+| 2 | — | Measured lock: body 54 × 21 × 15 mm, latch 25 mm out and 15 mm retracted (10 mm stroke). Closed 24 × 18 × 59 mm tunnel (1.5 mm clearance per side, 2 mm in length) loaded from the back and closed by a separate back cap 37d (Ø12 mm wire hole, 2 × M3); 16 × 16.5 mm latch window; door fin moved and thickened to 6 mm with a 16 × 17.7 mm window: 6 mm engagement with the latch out, 2 mm clearance with it retracted, ±3 mm tolerance to an off-centre latch. A 57° web under the ramp and a 50° fillet remove every support: the printed parts only have bridges ≤ 25 mm and 45° chamfers. |
 
 Physical test pending. Lesson 1 again: the lock was modelled from the catalogue before it was measured.
 
