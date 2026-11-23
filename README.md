@@ -343,7 +343,7 @@ The full list of electronics, motors, bearings and fasteners per subsystem is in
 3. **Elevator:** [docs/assembly-elevator.md](docs/assembly-elevator.md).
 4. **Kinect mount:** [docs/assembly-kinect-mount.md](docs/assembly-kinect-mount.md). Centre the servo (`servo.write(90)`) before attaching the cradle.
 5. **Gripper:** drop the servo into 36A, bolt 36A to the tool plate, centre the servo and fix the moving jaw (36B) to the horn in the closed position.
-6. **Hopper:** pass the wires through the hole in 37d, slide the solenoid into the tunnel of 37b (latch first, bevel facing the door) and screw 37d on; hang the door 37c, then bolt 37b to the bracket 37a and the bracket to the top plate.
+6. **Hopper:** pass the wires through the hole in 37d, slide the solenoid into the tunnel of 37b (latch first) and screw 37d on; hang the door 37c, then bolt 37b to the bracket 37a and the bracket to the top plate.
 
 > [!CAUTION]
 > Until limit switches are installed, never run the elevator motor for more than 1–2 s at a time near the ends of the stroke. The carriage will jam against the bottom collar or the top nut.
