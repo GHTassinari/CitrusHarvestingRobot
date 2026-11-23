@@ -38,6 +38,7 @@
 - [Bill of materials](#bill-of-materials)
 - [Assembly](#assembly)
 - [Test results](#test-results)
+- [How the robot will harvest](#how-the-robot-will-harvest)
 - [Roadmap and proposed improvements](#roadmap-and-proposed-improvements)
 - [Academic context and citation](#academic-context-and-citation)
 - [Credits](#credits)
@@ -359,6 +360,23 @@ Bench tests on a firm indoor floor:
 | Hopper | Door opens with the solenoid and relocks | 🔧 Verified in CAD (0–90° door swing). Physical test pending. |
 
 What went wrong along the way, and how each problem was solved, is documented in **[docs/design-log.md](docs/design-log.md)**.
+
+## How the robot will harvest
+
+The software is not implemented yet. The full proposal for the hardware and software integration is in **[docs/integration-plan.md](docs/integration-plan.md)**: pin map, serial protocol, fruit recognition and 3D localisation, and the harvesting state machine, all based on the real geometry of the CAD model.
+
+<div align="center">
+<img src="images/harvest-cycle-flowchart.png" alt="Harvesting cycle flowchart" width="520">
+</div>
+
+**In short:**
+
+1. The Kinect v2 scans the canopy and a YOLO model (NCNN on the Raspberry Pi) finds the oranges.
+2. The depth image and the pinhole camera model give each fruit's 3D position, which is converted into three values: a turn angle, a carriage height and a forward distance.
+3. The gripper opens, the robot approaches, and the gripper closes into a ring smaller than the fruit.
+4. The elevator lowers and/or the robot backs up to detach the fruit.
+5. The carriage drops the orange into the hopper, where it rolls down the ramp against the locked door.
+6. After two fruits, the robot stops with the door over a low crate. The relay powers the fail-secure solenoid for ~3 s, the oranges roll out, and the door swings back and relocks.
 
 ## Roadmap and proposed improvements
 
