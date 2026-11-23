@@ -263,16 +263,18 @@ Two arc-shaped jaws close into a ring that is **smaller than an orange**, so the
 
 <img src="images/hopper-side.png" alt="Hopper and gripper, side view" width="420">
 
-A static hopper hangs from the front edge of the top plate, below the gripper. It holds two oranges side by side. A ~19° ramp rolls them to a door hinged at the top and leaning slightly outwards, so it swings shut by its own weight. A 12 V **fail-secure** solenoid (TAU-S0837DL, locked when unpowered) engages a slot in a fin under the door.
+A static hopper hangs from the front edge of the top plate, below the gripper. It holds two oranges side by side. A ~19° ramp rolls them to a door hinged at the top and leaning slightly outwards, so it swings shut by its own weight. A 12 V **fail-secure** solenoid lock (locked when unpowered) engages a slot in a fin under the door. The pocket is sized for the **measured** lock: body ~80 × 21 × 15 mm and a 25 × 10 × 10 mm brass latch, with ~1 mm of clearance on each side.
+
+<img src="images/hopper-solenoid-pocket.png" alt="Solenoid pocket under the hopper ramp, seen from below" width="420">
 
 **Release cycle:** the Arduino counts the fruits dropped by the gripper. After the second one, it energises the solenoid for ~3 s through a relay. The pin retracts, the oranges push the door open and roll out, and the door falls back and relocks.
 
 | # | File | CAD object | Qty | Size (mm) | Description |
 |---|---|---|:-:|---|---|
 | 37a | [`37a_HopperBracket.stl`](stl/06-hopper/37a_HopperBracket.stl) | `Moega_Suporte` | 1 | 52 × 100 × 36 | L-bracket: base on the top plate (2 × M5 in existing holes), flange against the hopper's back wall (3 × M3 × 15). |
-| 37b | [`37b_HopperBody.stl`](stl/06-hopper/37b_HopperBody.stl) | `Moega` | 1 | 82.5 × 174 × 87 | Body with the ramp and a 55 × 26 × 20.5 mm pocket for the solenoid under the end of the ramp. |
-| 37c | [`37c_HopperDoor.stl`](stl/06-hopper/37c_HopperDoor.stl) | `Moega_Porta` | 1 | 74.7 × 165 × 26.4 | Door hung from two M3 × 15 screws through the wall lugs. The bottom fin has a 10 × 8 mm slot for the solenoid pin. Opens 0–90°. |
-| 37d | [`37d_SolenoidCover.stl`](stl/06-hopper/37d_SolenoidCover.stl) | `Moega_Tampa` | 1 | 44 × 61 × 3 | 3 mm cover for the solenoid pocket (4 × M3 + nuts). |
+| 37b | [`37b_HopperBody.stl`](stl/06-hopper/37b_HopperBody.stl) | `Moega` | 1 | 82 × 174 × 85.5 | Body with the ramp. Under the end of the ramp, a closed 23 × 17 × 84 mm tunnel holds the solenoid; it is open at the back, and a 13 × 13 mm window in the front wall lets the latch out. A 57° web under the ramp supports the tunnel while printing (window under the middle bracket nut). |
+| 37c | [`37c_HopperDoor.stl`](stl/06-hopper/37c_HopperDoor.stl) | `Moega_Porta` | 1 | 76.7 × 165 × 27.6 | Door hung from two M3 × 15 screws through the wall lugs. The 6 mm bottom fin has a 12 × 12 mm slot for the latch (6 mm engagement). Opens 0–90°. |
+| 37d | [`37d_SolenoidCover.stl`](stl/06-hopper/37d_SolenoidCover.stl) | `Moega_Tampa` | 1 | 29 × 29 × 6 | Back cap of the solenoid tunnel: 3 mm plate + locating plug, **Ø10 mm centre hole for the + and − wires**, 2 × M3 × 15 self-tapping into the body. |
 
 Operating constraints: the gripper must be ~25 mm above the lowest point of its stroke to drop a fruit into the hopper. The door sits ~55 mm above the ground, so the collecting crate must be low.
 
@@ -312,9 +314,7 @@ These numbers appear in the design log but were removed from the robot, so they 
 - **Printer:** Bambu Lab A1 (256 × 256 × 256 mm). The tallest parts (tower 24, lead screw 28) were designed to fit the build height in one piece.
 - **Material:** PETG for structural parts; **TPU** (95A) for the tracks (09, 10).
 - **Orientation:** the STLs are already exported in printing orientation. Parts 25 and 23 are rotated 45° to fit the bed.
-- **Supports:** none, except
-  - `36A`: tree supports only under the tip of the fixed jaw;
-  - `37b`: back wall on the bed, tree supports only under the solenoid pocket.
+- **Supports:** none, except `36A` (tree supports only under the tip of the fixed jaw). The hopper parts print without supports: `37b` back wall on the bed, `37c` outer face on the bed, `37d` flat.
 - **Lead screw (28):** print upright, one part per plate, with a brim and dry filament to avoid stringing on the thread.
 - **Why PETG and screws:** FDM printing reduces the strength of PETG, especially between layers, so parts are oriented with loads parallel to the layers. Every joint uses screws and nuts, never glue or press fits, so any part can be replaced.
 
@@ -331,7 +331,7 @@ The full list of electronics, motors, bearings and fasteners per subsystem is in
 | JGY370 12 V 40 RPM worm-gear motor, M6 threaded shaft | 1 | Elevator |
 | BTS7960 (IBT-2) 43 A H-bridge | 3 | Motor drivers |
 | DS3218MG 20 kg·cm servo | 2 | Gripper and Kinect tilt |
-| TAU-S0837DL 12 V fail-secure solenoid lock + 5 V relay module | 1 | Hopper door |
+| 12 V fail-secure solenoid lock (body ~80 × 21 × 15 mm, latch 25 × 10 × 10 mm) + 5 V relay module | 1 | Hopper door |
 | LiPo 3S 11.1 V 5000 mAh, XT90 | 1 | Battery |
 | XL4015 5 A step-down converter | 2 | 5.0 V logic and 5–6 V servo rails |
 | iMAX B3 Pro balance charger | 1 | On-board charging |
@@ -343,7 +343,7 @@ The full list of electronics, motors, bearings and fasteners per subsystem is in
 3. **Elevator:** [docs/assembly-elevator.md](docs/assembly-elevator.md).
 4. **Kinect mount:** [docs/assembly-kinect-mount.md](docs/assembly-kinect-mount.md). Centre the servo (`servo.write(90)`) before attaching the cradle.
 5. **Gripper:** drop the servo into 36A, bolt 36A to the tool plate, centre the servo and fix the moving jaw (36B) to the horn in the closed position.
-6. **Hopper:** fit the solenoid in 37b and close it with 37d, hang the door 37c, then bolt 37b to the bracket 37a and the bracket to the top plate.
+6. **Hopper:** pass the wires through the hole in 37d, slide the solenoid into the tunnel of 37b (latch first, bevel facing the door) and screw 37d on; hang the door 37c, then bolt 37b to the bracket 37a and the bracket to the top plate.
 
 > [!CAUTION]
 > Until limit switches are installed, never run the elevator motor for more than 1–2 s at a time near the ends of the stroke. The carriage will jam against the bottom collar or the top nut.

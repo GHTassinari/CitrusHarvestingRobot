@@ -54,7 +54,14 @@ The prototype was developed in short **design → print → assemble → test** 
 
 ## Hopper
 
-Designed and checked in CAD: the door swings 0–90° without collision and the body holds two oranges. It uses only existing holes, so it can be added without changing any other part. Physical test pending.
+Designed and checked in CAD: the door swings 0–90° without collision and the body holds two oranges. It uses only existing holes, so it can be added without changing any other part.
+
+| Version | Problem | Fix |
+|---|---|---|
+| 1 | The solenoid pocket (55 × 26 × 20.5 mm) was sized from the TAU-S0837DL catalogue. The real lock did not fit: its body is ~80 × 21 × 15 mm and the brass latch is 25 mm long, not 10 mm. The pocket also needed tree supports. | — |
+| 2 | — | Closed 23 × 17 × 84 mm tunnel (1 mm clearance per side) loaded from the back; back cap 37d with a Ø10 mm wire hole and 2 × M3 screws; door fin moved and thickened to 6 mm with a 12 × 12 mm slot (6 mm latch engagement). A 57° web under the ramp and a 50° fillet remove every support: the three printed parts only have bridges ≤ 25 mm and 45° chamfers. |
+
+Physical test pending. Lesson 1 again: the lock was modelled from the catalogue before it was measured.
 
 ## Recurring lessons
 

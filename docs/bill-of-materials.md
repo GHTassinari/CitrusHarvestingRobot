@@ -15,7 +15,7 @@ Printed parts are listed in the [README](../README.md#printed-parts). This page 
 | JGY370 12 V **40 RPM** worm-gear motor, M6 threaded output shaft | 1 | Elevator. |
 | BTS7960 / IBT-2 43 A H-bridge module | 3 | 2 tracks + 1 elevator (2 PWM pins each). |
 | DS3218MG 20 kg·cm digital servo | 2 | Gripper and Kinect tilt. **Measure your servo**: the tab-to-shaft-tip distance of ours was ~8 mm shorter than the catalogue value. |
-| TAU-S0837DL 12 V fail-secure solenoid lock | 1 | Hopper door. |
+| 12 V fail-secure solenoid lock (measured: body ~80 × 21 × 15 mm, latch 25 × 10 × 10 mm) | 1 | Hopper door. |
 | 1-channel 5 V relay module | 1 | Drives the solenoid from an Arduino pin. |
 | LiPo 3S 11.1 V 5000 mAh, XT90 (147 × 51 × 27 mm) | 1 | ~1 to 1.5 h of operation (estimate). |
 | iMAX B3 Pro 2S/3S balance charger | 1 | Fits the charger enclosure (18/19). |
@@ -43,7 +43,7 @@ Printed parts are listed in the [README](../README.md#printed-parts). This page 
 | Elevator | 6 × M5 × 20, 4 × M5 × 25 + nuts; 2 × M8 nuts; 1 × M6 nut + 1 × M6 nyloc; 8 × M3 × 20 (4 motor, 4 tool plate + nuts) |
 | Kinect mount | 16 × M3 × 20 + nuts; 1 × M5 × 20 hex-head bolt + M5 nyloc + washer |
 | Gripper | 4 × M3 × 15 + nuts (flange); 4 × M3 + nuts (servo tabs); servo horn kit screws |
-| Hopper | 2 × M5 + nuts (bracket to plate); 3 × M3 × 15 + nuts (bracket to body); 2 × M3 × 15 (door hinge); 4 × M3 + nuts (solenoid cover) |
+| Hopper | 2 × M5 + nuts (bracket to plate); 3 × M3 × 15 + nuts (bracket to body); 2 × M3 × 15 (door hinge); 2 × M3 × 15 self-tapping (solenoid cap) |
 
 ## Filament
 
