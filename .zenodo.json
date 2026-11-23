@@ -5,10 +5,20 @@
   "creators": [
     {
       "name": "Tassinari, Guilherme Henrique",
-      "affiliation": "IFSULDEMINAS - Campus Machado"
+      "affiliation": "IFSULDEMINAS - Campus Machado",
+      "orcid": "0009-0006-8193-9395"
     }
   ],
   "license": "cc-by-sa-4.0",
-  "keywords": ["agricultural robotics", "orange harvesting", "citrus", "internet of things", "edge computing", "3D printing", "open hardware", "FreeCAD"],
+  "keywords": [
+    "agricultural robotics",
+    "orange harvesting",
+    "citrus",
+    "internet of things",
+    "edge computing",
+    "3D printing",
+    "open hardware",
+    "FreeCAD"
+  ],
   "language": "eng"
 }

@@ -11,6 +11,7 @@ abstract: >-
 authors:
   - family-names: Tassinari
     given-names: Guilherme Henrique
+    orcid: "https://orcid.org/0009-0006-8193-9395"
     affiliation: "Federal Institute of Education, Science and Technology of Southern Minas Gerais (IFSULDEMINAS), Campus Machado"
 doi: 10.5281/zenodo.24451133
 identifiers:
@@ -41,6 +42,7 @@ preferred-citation:
   authors:
     - family-names: Tassinari
       given-names: Guilherme Henrique
+      orcid: "https://orcid.org/0009-0006-8193-9395"
   institution:
     name: "Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais (IFSULDEMINAS), Campus Machado"
     city: Machado

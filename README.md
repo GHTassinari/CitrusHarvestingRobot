@@ -384,7 +384,7 @@ What went wrong along the way, and how each problem was solved, is documented in
 
 ## Academic context and citation
 
-This work is the undergraduate thesis (TCC) of **Guilherme Henrique Tassinari**, Bachelor's degree in Information Systems at the **Federal Institute of Education, Science and Technology of Southern Minas Gerais (IFSULDEMINAS), Campus Machado**, Brazil, 2026. Supervisor: Prof. Dr. Vinicius Ferreira de Souza.
+This work is the undergraduate thesis (TCC) of **Guilherme Henrique Tassinari** ([ORCID 0009-0006-8193-9395](https://orcid.org/0009-0006-8193-9395)), Bachelor's degree in Information Systems at the **Federal Institute of Education, Science and Technology of Southern Minas Gerais (IFSULDEMINAS), Campus Machado**, Brazil, 2026. Supervisor: Prof. Dr. Vinicius Ferreira de Souza.
 
 The research follows the **Design Science Research** method. The robot is the artefact, and each design–print–test cycle documented in the design log is one iteration of the development and evaluation stages.
 
