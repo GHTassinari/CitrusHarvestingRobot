@@ -104,7 +104,8 @@ CitrusHarvestingRobot/
 │   ├── assembly-elevator.md
 │   ├── assembly-kinect-mount.md
 │   ├── bill-of-materials.md
-│   └── design-log.md                 # problems found and how they were solved
+│   ├── design-log.md                 # problems found and how they were solved
+│   └── integration-plan.md           # proposed wiring, software and harvesting cycle
 └── images/                           # renders, diagram and part thumbnails
 ```
 
