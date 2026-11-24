@@ -263,7 +263,7 @@ Two arc-shaped jaws close into a ring that is **smaller than an orange**, so the
 
 <img src="images/hopper-side.png" alt="Hopper and gripper, side view" width="420">
 
-A static hopper hangs from the front edge of the top plate, below the gripper. It holds two oranges side by side. A ~19° ramp rolls them to a door hinged at the top and leaning slightly outwards, so it swings shut by its own weight. A 12 V **fail-secure** solenoid lock (locked when unpowered) engages a slot in a fin under the door. The pocket is sized for the **measured** lock: metal body 54 × 21 × 15 mm and a 10 × 10 mm brass latch that sticks out 25 mm when released and 15 mm when energised (10 mm stroke). There is 1.5 mm of clearance around the body, 2 mm in length and 3 mm around the latch, and the back cap pushes the lock against the front wall.
+A static hopper hangs from the front edge of the top plate, below the gripper. It holds two oranges side by side. A ~19° ramp rolls them to a door hinged at the top and leaning slightly outwards, so it swings shut by its own weight. A 12 V **fail-secure** solenoid lock (locked when unpowered) engages a window in a fin under the door. The pocket is sized for the **measured** lock: it needs at least 23 mm of width and 26 mm of height, and it is about 80 mm long with the latch out and under 70 mm with it retracted (54 mm body, 10 × 10 mm brass latch, 10 mm stroke). The tunnel is 29 × 30 mm inside, about 3 mm of clearance on each side, and two M3 side screws push the lock against the left wall so the latch lines up with the door window.
 
 <img src="images/hopper-solenoid-pocket.png" alt="Solenoid pocket under the hopper ramp, seen from below" width="420">
 
@@ -272,9 +272,9 @@ A static hopper hangs from the front edge of the top plate, below the gripper. I
 | # | File | CAD object | Qty | Size (mm) | Description |
 |---|---|---|:-:|---|---|
 | 37a | [`37a_HopperBracket.stl`](stl/06-hopper/37a_HopperBracket.stl) | `Moega_Suporte` | 1 | 52 × 100 × 36 | L-bracket: base on the top plate (2 × M5 in existing holes), flange against the hopper's back wall (3 × M3 × 15). |
-| 37b | [`37b_HopperBody.stl`](stl/06-hopper/37b_HopperBody.stl) | `Moega` | 1 | 83 × 174 × 85.5 | Body with the ramp. Under the end of the ramp, a closed 24 × 18 × 59 mm tunnel holds the solenoid; it is open at the back, and a 16 × 16.5 mm window in the front wall lets the latch out. A 57° web under the ramp supports the tunnel while printing (window under the middle bracket nut). |
-| 37c | [`37c_HopperDoor.stl`](stl/06-hopper/37c_HopperDoor.stl) | `Moega_Porta` | 1 | 80.7 × 165 × 31.8 | Door hung from two M3 × 15 screws through the wall lugs. The 6 mm bottom fin has a 16 × 17.7 mm window for the latch: 6 mm engagement when the latch is out, 2 mm clearance when it is retracted. Opens 0–90°. |
-| 37d | [`37d_SolenoidCover.stl`](stl/06-hopper/37d_SolenoidCover.stl) | `Moega_Tampa` | 1 | 30 × 24 × 6 | **Separate back cap** of the solenoid tunnel: 3 mm plate + locating plug, **Ø12 mm centre hole for the + and − wires**, 2 × M3 × 15 self-tapping into the tunnel floor. |
+| 37b | [`37b_HopperBody.stl`](stl/06-hopper/37b_HopperBody.stl) | `Moega` | 1 | 95 × 174 × 85.5 | Body with the ramp. Under the end of the ramp, a closed 29 × 30 × 59 mm tunnel holds the solenoid; it is open at the back, a 17.5 × 20 mm window in the front wall lets the latch out, and two Ø2.6 holes in the side take M3 × 10 clamp screws. A 45° web and wedge under the ramp support the tunnel while printing (window under the middle bracket nut). |
+| 37c | [`37c_HopperDoor.stl`](stl/06-hopper/37c_HopperDoor.stl) | `Moega_Porta` | 1 | 86.7 × 165 × 37.2 | Door hung from two M3 × 15 screws through the wall lugs. The 6 mm bottom fin has a 17.5 × 20 mm window for the latch: 6 mm engagement when the latch is out, 2 mm clearance when it is retracted. Opens 0–90°. |
+| 37d | [`37d_SolenoidCover.stl`](stl/06-hopper/37d_SolenoidCover.stl) | `Moega_Tampa` | 1 | 34 × 36 × 6 | **Separate back cap** of the solenoid tunnel: 3 mm plate + locating plug, **Ø12 mm centre hole for the + and − wires**, 2 × M3 × 15 self-tapping into the tunnel floor. |
 
 Operating constraints: the gripper must be ~25 mm above the lowest point of its stroke to drop a fruit into the hopper. The door sits ~55 mm above the ground, so the collecting crate must be low.
 
@@ -331,7 +331,7 @@ The full list of electronics, motors, bearings and fasteners per subsystem is in
 | JGY370 12 V 40 RPM worm-gear motor, M6 threaded shaft | 1 | Elevator |
 | BTS7960 (IBT-2) 43 A H-bridge | 3 | Motor drivers |
 | DS3218MG 20 kg·cm servo | 2 | Gripper and Kinect tilt |
-| 12 V fail-secure solenoid lock (body 54 × 21 × 15 mm, 10 × 10 mm latch, 25 mm out / 15 mm retracted) + 5 V relay module | 1 | Hopper door |
+| 12 V fail-secure solenoid lock (needs ≥ 23 × 26 mm section, ~80 mm long out / < 70 mm retracted, 10 × 10 mm latch) + 5 V relay module | 1 | Hopper door |
 | LiPo 3S 11.1 V 5000 mAh, XT90 | 1 | Battery |
 | XL4015 5 A step-down converter | 2 | 5.0 V logic and 5–6 V servo rails |
 | iMAX B3 Pro balance charger | 1 | On-board charging |
