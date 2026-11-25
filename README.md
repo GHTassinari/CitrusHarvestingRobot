@@ -57,6 +57,15 @@ The platform is meant to be **expandable**: the top plates use a regular hole gr
 > [!NOTE]
 > Scope of this release: mechanics and embedded hardware. Fruit detection with computer vision, the integrated harvesting software and field tests are planned as future work (see [Roadmap](#roadmap-and-proposed-improvements)).
 
+### The assembled prototype
+
+<p align="center">
+<img src="images/photo-front.jpg" alt="Assembled prototype, front view: tracked chassis, elevator, Kinect v2 on top, gripper and hopper" width="330">
+<img src="images/photo-side.jpg" alt="Assembled prototype, side view, with the gripper above the hopper" width="330">
+</p>
+
+<p align="center"><em>Front and side views of the printed robot, with the hopper v3 installed.</em></p>
+
 ## Highlights
 
 | Subsystem | What it does | Key figures |
@@ -358,7 +367,7 @@ Bench tests on a firm indoor floor:
 | Elevator | Carriage travels the usable stroke without jamming | ✅ ~131 mm stroke. ⚠️ Limit switches still needed. |
 | Kinect mount | Tilt −15° to +20° without collision | ✅ Assembled and tilting. |
 | Gripper | Opens and closes 0–75° and encloses the fruit | ✅ Works after the 8 mm fixed-jaw correction. |
-| Hopper | Door opens with the solenoid and relocks | 🔧 Verified in CAD (0–90° door swing). Physical test pending. |
+| Hopper | Lock fits; the latch holds the door shut and releases it when retracted | ✅ v3 printed and installed on the robot: the lock fits the 29 × 30 mm tunnel and the latch locks and releases the door. |
 
 What went wrong along the way, and how each problem was solved, is documented in **[docs/design-log.md](docs/design-log.md)**.
 

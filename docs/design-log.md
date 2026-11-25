@@ -54,7 +54,7 @@ The prototype was developed in short **design → print → assemble → test** 
 
 ## Hopper
 
-Designed and checked in CAD: the door swings 0–90° without collision and the body holds two oranges. It uses only existing holes, so it can be added without changing any other part.
+Version 3 was printed, installed on the robot and works: the lock fits the tunnel, and the latch holds the door shut and releases it when retracted. In CAD, the door swings 0–90° without collision and the body holds two oranges. It uses only existing holes, so it can be added without changing any other part.
 
 | Version | Problem | Fix |
 |---|---|---|
