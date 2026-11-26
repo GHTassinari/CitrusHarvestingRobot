@@ -102,7 +102,7 @@ CitrusHarvestingRobot/
 ├── cad/
 │   └── CitrusHarvestingRobot.FCStd   # full FreeCAD assembly (source of truth)
 ├── stl/
-│   ├── 01-chassis/                   # plates, brackets, wheels, tracks, spacers
+│   ├── 01-chassis/                   # plates, brackets, wheels, tracks, spacers, screw caps
 │   ├── 02-power/                     # battery and charger enclosures
 │   ├── 03-elevator/                  # tower, carriage, lead screw, gears
 │   ├── 04-kinect-mount/              # tilt cradles and mounts
@@ -118,14 +118,14 @@ CitrusHarvestingRobot/
 └── images/                           # renders, diagram and part thumbnails
 ```
 
-Part numbers (`01`–`37`) are kept from the original project so that every file can be traced back to the design log. Gaps in the numbering are [discontinued parts](#discontinued-part-numbers).
+Part numbers (`01`–`38`) are kept from the original project so that every file can be traced back to the design log. Gaps in the numbering are [discontinued parts](#discontinued-part-numbers).
 
 > [!TIP]
 > The CAD file is the source of truth: every revision was first applied to the model and checked for interference before being printed. Object names inside the `.FCStd` are in Portuguese; the **CAD object** column in the tables below gives the matching name.
 
 ## Printed parts
 
-All parts are printed in **PETG** unless stated otherwise. *Size* is the bounding box of the STL as exported (mm). Every part is fixed with **M3 or M5 screws and nuts**; nothing is glued or press-fitted.
+All parts are printed in **PETG** unless stated otherwise. *Size* is the bounding box of the STL as exported (mm). Every part is fixed with **M3 or M5 screws and nuts**; nothing is glued or press-fitted, except the small TPU screw caps (38a/38b).
 
 ### 01 · Chassis and locomotion
 
@@ -147,6 +147,8 @@ The chassis is a sandwich of two identical plates joined by four side brackets. 
 | 10 | [`10_Track_Right.stl`](stl/01-chassis/10_Track_Right.stl) | `Esteira_Dir` | 1 | Ø204.4 × 17 | **TPU**, same as part 09. |
 | 13 | [`13_RearAxleSpacer.stl`](stl/01-chassis/13_RearAxleSpacer.stl) | `EspacadorRolamento` | 2 | Ø16 × 8 | Spacer between the 6000ZZ bearing and the rear wheel. |
 | 15 | [`15_FrontAxleSpacer.stl`](stl/01-chassis/15_FrontAxleSpacer.stl) | `EspacadorRolamentoMotor` | 2 | Ø12 × 8 | Spacer between the MR126ZZ bearing and the front wheel. |
+| 38a | [`38a_ScrewCap.stl`](stl/01-chassis/38a_ScrewCap.stl) | `Protetor_Inferior` | **9** | Ø13.2 × 4.7 | **TPU** cap pressed over a single M5 pan-head screw under the bottom plate (Ø9.4 bore, 3.9 mm deep), plus a drop of superglue. Stops the screw heads from scraping the floor. |
+| 38b | [`38b_ScrewCap_Double.stl`](stl/01-chassis/38b_ScrewCap_Double.stl) | `Protetor_Inferior` | **4** | 26.5 × 13.2 × 4.7 | **TPU** double cap for the corner screw pairs, which are only 12.2 mm apart (two Ø9.8 bores). |
 
 <details>
 <summary>Thumbnails</summary>
@@ -155,11 +157,16 @@ The chassis is a sandwich of two identical plates joined by four side brackets. 
 |:-:|:-:|:-:|:-:|
 | <img src="images/parts/01_TopPlate.png" width="150"><br>01 | <img src="images/parts/03_MotorBracket_Left.png" width="150"><br>03 / 04 | <img src="images/parts/05_BearingBracket_Left.png" width="150"><br>05 / 06 | <img src="images/parts/07_FrontWheel_Half.png" width="150"><br>07 |
 | <img src="images/parts/08_RearWheel_Half.png" width="150"><br>08 | <img src="images/parts/09_Track_Left.png" width="150"><br>09 / 10 | <img src="images/parts/13_RearAxleSpacer.png" width="150"><br>13 | <img src="images/parts/15_FrontAxleSpacer.png" width="150"><br>15 |
+| <img src="images/parts/38a_ScrewCap.png" width="150"><br>38a | <img src="images/parts/38b_ScrewCap_Double.png" width="150"><br>38b | | |
 
 </details>
 
 > [!WARNING]
 > **Track length.** The track that ran successfully on the prototype was printed at **92 %** of the installed perimeter. The file in this repository is the later **97 %** revision with the teeth moved to the inner face, which has not been printed yet. If it turns out too loose, regenerate the ring at 92 % from the CAD file (scaling the STL in the slicer also changes the tooth pitch).
+
+**Screw caps.** Only ~3 mm are left between the bottom plate and the floor, so the 17 M5 pan heads under the plate scraped the ground. They are covered by TPU caps (9 single + 4 double for the corner pairs), press-fitted and secured with a drop of superglue. The bore was tuned by test: the double cap holds with Ø9.8, but the single cap only stayed on with Ø9.4, since it has no second head to stop it from coming off.
+
+<img src="images/screw-caps.png" alt="Bottom plate seen from below with the 13 TPU screw caps" width="360">
 
 **Axle stack-ups** (inside to outside):
 
@@ -321,11 +328,11 @@ These numbers appear in the design log but were removed from the robot, so they 
 ## Printing guidelines
 
 - **Printer:** Bambu Lab A1 (256 × 256 × 256 mm). The tallest parts (tower 24, lead screw 28) were designed to fit the build height in one piece.
-- **Material:** PETG for structural parts; **TPU** (95A) for the tracks (09, 10).
+- **Material:** PETG for structural parts; **TPU** (95A) for the tracks (09, 10) and the screw caps (38a, 38b, open side on the bed).
 - **Orientation:** the STLs are already exported in printing orientation. Parts 25 and 23 are rotated 45° to fit the bed.
 - **Supports:** none, except `36A` (tree supports only under the tip of the fixed jaw). The hopper parts print without supports: `37b` back wall on the bed, `37c` outer face on the bed, `37d` flat.
 - **Lead screw (28):** print upright, one part per plate, with a brim and dry filament to avoid stringing on the thread.
-- **Why PETG and screws:** FDM printing reduces the strength of PETG, especially between layers, so parts are oriented with loads parallel to the layers. Every joint uses screws and nuts, never glue or press fits, so any part can be replaced.
+- **Why PETG and screws:** FDM printing reduces the strength of PETG, especially between layers, so parts are oriented with loads parallel to the layers. Every structural joint uses screws and nuts, never glue or press fits, so any part can be replaced (the small screw caps 38a/38b are the only press-fitted parts).
 
 ## Bill of materials
 

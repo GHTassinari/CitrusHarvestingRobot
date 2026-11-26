@@ -24,6 +24,7 @@ The prototype was developed in short **design → print → assemble → test** 
 | The front wheel slipped on its shaft under track tension. | The wheel was held by nut friction only. | Nyloc nuts + threadlocker; the radial locking screw was added to part 07 as a further option. |
 | The track kept failing at 92 % length and the wheels looked tilted. | One rear bearing bracket was mounted on the wrong side: the off-centre axle sat **13 mm higher**. | Brackets swapped and mounted upright. **First successful run on 7 Oct 2026** with the 92 % track. |
 | Battery and charger boxes printed badly. | Overhangs and side features that needed supports. | v2 boxes: lids screwed through vertical fins, everything prints without support, fixed only to existing holes. |
+| The screw heads under the bottom plate scraped the floor. | Only ~3 mm between the plate and the ground; the 17 M5 pan heads (~Ø10 × 3.5 mm) stick out below it. A thin TPU sheet with pockets, taped under the whole plate, was modelled first. | Replaced by individual TPU caps (less material, each one replaceable), press-fitted with a drop of superglue: 9 single (38a) and 4 double (38b) for the corner pairs, 12.2 mm apart. Bore found by test: the double cap holds at Ø9.8, the single needed Ø9.4 (9.8 and 9.6 fell off). Superglue alone was not relied on, since it cracks on flexible TPU. |
 
 ## Elevator
 

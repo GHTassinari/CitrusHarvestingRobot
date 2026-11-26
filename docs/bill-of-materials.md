@@ -38,7 +38,7 @@ Printed parts are listed in the [README](../README.md#printed-parts). This page 
 
 | Subsystem | Fasteners |
 |---|---|
-| Chassis | M5 bolts + nuts for the brackets and plates (~); motor screws M2.5 × 16 + nuts; 4 × M4 bolts + nuts per wheel (16 total); front axles: 4 × M6 washers + 2 × M6 nyloc; rear axles: 4 × M10 washers + 2 × M10 thin nuts + 2 × M10 nyloc + threadlocker; optional 4 × M3 × 16 self-tapping pan-head screws to lock the front wheels |
+| Chassis | M5 bolts + nuts for the brackets and plates (~); motor screws M2.5 × 16 + nuts; 4 × M4 bolts + nuts per wheel (16 total); front axles: 4 × M6 washers + 2 × M6 nyloc; rear axles: 4 × M10 washers + 2 × M10 thin nuts + 2 × M10 nyloc + threadlocker; optional 4 × M3 × 16 self-tapping pan-head screws to lock the front wheels; cyanoacrylate glue (superglue) for the TPU screw caps |
 | Power enclosures | 7 × M5 × 20 + nuts and washers (4 battery, 3 charger); 7 × M3 × 20 + nuts (5 lids, 2 plug holder) |
 | Elevator | 6 × M5 × 20, 4 × M5 × 25 + nuts; 2 × M8 nuts; 1 × M6 nut + 1 × M6 nyloc; 8 × M3 × 20 (4 motor, 4 tool plate + nuts) |
 | Kinect mount | 16 × M3 × 20 + nuts; 1 × M5 × 20 hex-head bolt + M5 nyloc + washer |
@@ -50,4 +50,4 @@ Printed parts are listed in the [README](../README.md#printed-parts). This page 
 | Material | Used for |
 |---|---|
 | PETG (black) | All structural parts |
-| TPU 95A (black) | Tracks 09 and 10 |
+| TPU 95A (black) | Tracks 09 and 10; screw caps 38a and 38b |
